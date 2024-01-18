@@ -55,5 +55,3 @@ report_definitions = [
         "permission": ["131202"],
     },
 ]
-
-logging.debug("Report definations defined")
