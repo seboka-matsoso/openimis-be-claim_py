@@ -2,6 +2,7 @@ from claim.reports import claim_elligibility, claim_percentage_referrals, claims
     claims_primary_operational_indicators
 from claim.reports.claim_history import claim_history_query
 from claim.reports.claim_percentage_referrals import claim_percentage_referrals_query
+from claim.reports.claim_elligibility import claim_ellibility_query
 from claim.reports.claims_overview import claims_overview_query
 from claim.reports.claims_primary_operational_indicators import claims_primary_operational_indicators_query
 
