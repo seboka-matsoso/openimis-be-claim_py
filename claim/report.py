@@ -6,6 +6,8 @@ from claim.reports.claim_elligibility import claim_ellibility_query
 from claim.reports.claims_overview import claims_overview_query
 from claim.reports.claims_primary_operational_indicators import claims_primary_operational_indicators_query
 
+import logging
+
 report_definitions = [
     {
         "name": "claim_elligibility",
@@ -53,3 +55,5 @@ report_definitions = [
         "permission": ["131202"],
     },
 ]
+
+logging.DEBUG("Report definations defined")
