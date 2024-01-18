@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../openimis-dist_dkr"
+		},
+		{
+			"path": "../openimis-be-report_py"
 		}
 	],
 	"settings": {}

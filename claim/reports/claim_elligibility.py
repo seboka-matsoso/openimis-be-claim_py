@@ -1181,11 +1181,11 @@ FROM (SELECT HF."HfID", HF."HFCode", HF."HFName"
 
 def claim_ellibility_query(user, region_id=0, district_id=0, date_start="2019-01-01", date_end="2022-12-31",
                                      **kwargs):
-    logging.DEBUG("Starting query")
+    logging.info("Starting query")
     with connection.cursor() as cur:
         try:
             cur.execute(
-                percentage_referrals_sql,
+                claim_ellibility_sql,
                 {
                     "region_id": region_id,
                     "district_id": district_id,
