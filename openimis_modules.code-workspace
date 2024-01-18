@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "../openimis-be_py"
+		},
+		{
+			"path": "../openimis-fe-claim_js"
 		}
 	],
 	"settings": {}
