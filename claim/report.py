@@ -56,4 +56,4 @@ report_definitions = [
     },
 ]
 
-logging.DEBUG("Report definations defined")
+logging.debug("Report definations defined")
