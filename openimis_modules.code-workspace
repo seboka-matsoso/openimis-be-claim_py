@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "../openimis-be-report_py"
+		},
+		{
+			"path": "../openimis-be_py"
 		}
 	],
 	"settings": {}
