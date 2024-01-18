@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../openimis-dist_dkr"
 		}
 	],
 	"settings": {}
