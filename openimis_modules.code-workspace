@@ -16,5 +16,18 @@
 			"path": "../openimis-fe-claim_js"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"sqltools.connections": [
+			{
+				"previewLimit": 50,
+				"server": "localhost",
+				"port": 5432,
+				"driver": "PostgreSQL",
+				"name": "openimis-db",
+				"database": "IMIS",
+				"username": "IMISuser",
+				"password": "IMISuserP@s"
+			}
+		]
+	}
 }
