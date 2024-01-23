@@ -15,8 +15,8 @@ report_definitions = [
         "default_report": claim_elligibility.template,
         "description": "Claim elligibility status",
         "module": "claim",
-        "python_query": claim_ellibility_query,
-        "permission": ["131214"],
+        "python_query": claim_elligibility_query,
+        "permission": ["131227"],
     },
     {
         "name": "claim_percentage_referrals",

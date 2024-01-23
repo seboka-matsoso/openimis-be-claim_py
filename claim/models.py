@@ -17,7 +17,6 @@ from django.apps import apps
 
 core_config = apps.get_app_config('core')
 
-
 class ClaimAdmin(core_models.VersionedModel):
     id = models.AutoField(db_column='ClaimAdminId', primary_key=True)
     uuid = models.CharField(db_column='ClaimAdminUUID', max_length=36, default=uuid.uuid4, unique=True)
@@ -129,10 +128,7 @@ class Feedback(core_models.VersionedModel):
             queryset =  LocationManager().build_user_location_filter_query( user._u, prefix='health_facility__location', queryset=queryset, loc_types=['D'])    
         return queryset
 
-
-
 signal_claim_rejection = dispatch.Signal(providing_args=["claim"])
-
 
 class Claim(core_models.VersionedModel, core_models.ExtendableModel):
     id = models.AutoField(db_column='ClaimID', primary_key=True)
@@ -338,8 +334,6 @@ class FeedbackPrompt(core_models.VersionedModel):
             queryset =  LocationManager().build_user_location_filter_query( user._u, prefix='health_facility__location', queryset=queryset, loc_types=['D'])    
 
         return queryset
-
-
 
 class ClaimAttachmentsCount(models.Model):
     claim = models.OneToOneField(Claim, primary_key=True, related_name='attachments_count', on_delete=models.DO_NOTHING)

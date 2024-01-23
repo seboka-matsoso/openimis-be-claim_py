@@ -16,7 +16,7 @@ template = """
             "y": 20,
             "width": 575,
             "height": 40,
-            "content": "Percentage of referrals in claims",
+            "content": "Claim Elligibility Status",
             "richText": false,
             "richTextContent": null,
             "richTextHtml": "",
@@ -1131,7 +1131,7 @@ template = """
 """
 
 # TODO transform the SQL query into a Django ORM query
-claim_ellibility_sql = """
+claim_elligibility_sql = """
 SELECT CONCAT(HF."HFCode", ' - ', HF."HFName") HF, TotalClaim.TotalClaims, RefOP.TotalOP, RefIP.TotalIP
 FROM (SELECT HF."HfID", HF."HFCode", HF."HFName"
       FROM "tblHF" HF
@@ -1179,13 +1179,13 @@ FROM (SELECT HF."HfID", HF."HFCode", HF."HFName"
 """
 
 
-def claim_ellibility_query(user, region_id=0, district_id=0, date_start="2019-01-01", date_end="2022-12-31",
+def claim_elligibility_query(user, region_id=0, district_id=0, date_start="2019-01-01", date_end="2022-12-31",
                                      **kwargs):
     logging.info("Starting query")
     with connection.cursor() as cur:
         try:
             cur.execute(
-                claim_ellibility_sql,
+                claim_elligibility_sql,
                 {
                     "region_id": region_id,
                     "district_id": district_id,
