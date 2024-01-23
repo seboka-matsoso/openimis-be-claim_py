@@ -16,7 +16,7 @@ report_definitions = [
         "description": "Claim elligibility status",
         "module": "claim",
         "python_query": claim_elligibility_query,
-        "permission": ["131227"],
+        "permission": ["131214"],
     },
     {
         "name": "claim_percentage_referrals",
