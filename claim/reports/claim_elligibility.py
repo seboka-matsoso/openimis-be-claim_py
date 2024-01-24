@@ -1131,7 +1131,7 @@ template = """
 """
 
 # TODO transform the SQL query into a Django ORM query
-claim_elligibility_sql = """
+elligibility_sql = """
 SELECT CONCAT(HF."HFCode", ' - ', HF."HFName") HF, TotalClaim.TotalClaims, RefOP.TotalOP, RefIP.TotalIP
 FROM (SELECT HF."HfID", HF."HFCode", HF."HFName"
       FROM "tblHF" HF
@@ -1185,7 +1185,7 @@ def claim_elligibility_query(user, region_id=0, district_id=0, date_start="2019-
     with connection.cursor() as cur:
         try:
             cur.execute(
-                claim_elligibility_sql,
+                elligibility_sql,
                 {
                     "region_id": region_id,
                     "district_id": district_id,
