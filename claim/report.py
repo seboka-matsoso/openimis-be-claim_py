@@ -1,7 +1,7 @@
-from claim.reports import claim_elligibility, claim_percentage_referrals, claims_overview, claim_history, \
+from claim.reports import claim_elligibility, claim_percentage_referral, claims_overview, claim_history, \
     claims_primary_operational_indicators
 from claim.reports.claim_history import claim_history_query
-from claim.reports.claim_percentage_referrals import claim_percentage_referrals_query
+from claim.reports.claim_percentage_referral import claim_percentage_referral_query
 from claim.reports.claim_elligibility import claim_elligibility_query
 from claim.reports.claims_overview import claims_overview_query
 from claim.reports.claims_primary_operational_indicators import claims_primary_operational_indicators_query
@@ -19,12 +19,12 @@ report_definitions = [
         "permission": ["131214"],
     },
     {
-        "name": "claim_percentage_referrals",
+        "name": "claim_percentage_referral",
         "engine": 0,
-        "default_report": claim_percentage_referrals.template,
+        "default_report": claim_percentage_referral.template,
         "description": "Percentage of referrals in claims",
         "module": "claim",
-        "python_query": claim_percentage_referrals_query,
+        "python_query": claim_percentage_referral_query,
         "permission": ["131214"],
     },
     {

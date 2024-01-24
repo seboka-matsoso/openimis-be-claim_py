@@ -1131,7 +1131,7 @@ template = """
 """
 
 # TODO transform the SQL query into a Django ORM query
-percentage_referrals_sql = """
+percentage_referral_sql = """
 SELECT CONCAT(HF."HFCode", ' - ', HF."HFName") HF, TotalClaim.TotalClaims, RefOP.TotalOP, RefIP.TotalIP
 FROM (SELECT HF."HfID", HF."HFCode", HF."HFName"
       FROM "tblHF" HF
@@ -1179,12 +1179,12 @@ FROM (SELECT HF."HfID", HF."HFCode", HF."HFName"
 """
 
 
-def claim_percentage_referrals_query(user, region_id=0, district_id=0, date_start="2019-01-01", date_end="2022-12-31",
+def claim_percentage_referral_query(user, region_id=0, district_id=0, date_start="2019-01-01", date_end="2022-12-31",
                                      **kwargs):
     with connection.cursor() as cur:
         try:
             cur.execute(
-                percentage_referrals_sql,
+                percentage_referral_sql,
                 {
                     "region_id": region_id,
                     "district_id": district_id,
