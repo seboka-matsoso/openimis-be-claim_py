@@ -34,6 +34,8 @@ DEFAULT_CFG = {
     "claim_max_restore": None
 }
 
+for key, value in DEFAULT_CFG.items():
+    print(f"{key}: {value}")
 
 class ClaimConfig(AppConfig):
     name = MODULE_NAME
@@ -78,4 +80,6 @@ class ClaimConfig(AppConfig):
     def ready(self):
         from core.models import ModuleConfiguration
         cfg = ModuleConfiguration.get_or_default(MODULE_NAME, DEFAULT_CFG)
+        for key, value in cfg.items():
+            print(f"{key}: {value}")
         self.__load_config(cfg)
